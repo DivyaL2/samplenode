@@ -1,0 +1,14 @@
+const EventEmitter=require("events");
+
+
+const Logger=require("./logger");
+const logger=new Logger(); //instance of the custom class
+logger.on('messageLogged',(arg)=>{
+    console.log('listener called',arg);
+})
+logger.log('message');
+
+
+
+
+
